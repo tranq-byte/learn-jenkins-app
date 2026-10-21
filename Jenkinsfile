@@ -14,9 +14,9 @@ pipeline {
                 ls -la
                 node --version
                 npm --version
-               rm -rf node_modules
-               npm ci --no-audit --no-fund
+               npm ci
                npm run build
+               cat /home/node/.npm/_logs/2026-10-21T17_42_46_875Z-debug-0.log || true
                 ls -la
                 '''
             }
