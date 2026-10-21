@@ -15,9 +15,9 @@ pipeline {
                 node --version
                 npm --version
                npm ci
-               npm run build
-                latest_log=$(ls -t /home/node/.npm/_logs/*debug-0.log 2>/dev/null | head -1)
-    [ -z "$latest_log" ] || cat "$latest_log"
+latest_log=$(ls -t /home/node/.npm/_logs/*debug-0.log 2>/dev/null | head -1)
+[ -z "$latest_log" ] || cat "$latest_log"
+npm run build
                 ls -la
                 '''
             }
