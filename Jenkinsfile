@@ -15,6 +15,7 @@ pipeline {
                 node --version
                 npm --version
                 npm ci
+                echo "npm ci exit code: $?"
                 npm run build
                 ls -la
                 '''
